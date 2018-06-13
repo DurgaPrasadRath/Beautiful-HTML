@@ -33,7 +33,7 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: url, label: Url }
-   - name: article
+  - name: article
     label: article
     folder: src/pages/article/_posts
     create: true
