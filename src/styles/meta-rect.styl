@@ -1,0 +1,62 @@
+@import variables
+@import mixins
+
+.meta-rect
+  height 62px
+  width 100%
+  margin 0
+  padding 10px 10px 0 10px
+  display flex
+  background-color neon_green
+  font-size 13px
+  font-weight 500
+  letter-spacing 0.025em
+  tabularNumbers()
+
+  > div
+    flex-grow 1
+    flex-basis 0
+    border 1px solid dark_green
+    border-width 0 0 0 1px
+    box-sizing border-box
+    padding 0 0 0 10px
+    height 100%
+    span
+      position relative
+      top -2px
+    &.no-border
+      border-width 0 !important
+      padding 0
+    &:last-of-type
+      border-width 0 1px 0 1px
+    @media only screen and (max-width: 45em) 
+      &.last-of-type-sm
+        border-width 0 1px 0 1px
+  
+  &.dark
+    background-color dark_green
+    color neon_green
+    div
+      border-color neon_green
+    
+  &.bottom
+    padding 0 10px 10px 10px 
+    div
+      display flex
+      span
+        align-self flex-end
+        top 3px
+    
+  &.small
+    height 31px
+    
+  &.extra-small
+    height 25px
+    padding 6px 6px 0 6px
+    > div
+      padding 0 0 0 6px
+    &.bottom 
+      padding 0 6px 6px 6px
+      div span 
+        top 2px
+      

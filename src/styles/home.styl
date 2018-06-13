@@ -1,0 +1,107 @@
+@import variables
+
+h2
+  font-size 50px
+  line-height 1.1
+  letter-spacing -0.5px
+  color dark_green
+  max-width 720px
+  @media screen and (max-width: 720px)
+    font-size 35px
+
+.bottom-text
+  @extends h2
+  position relative
+  top 300px
+  @media screen and (max-width: 720px)
+    top: 350px
+
+.homepage-header
+  padding 10px
+  background-image url('../assets/homepage-grid.png')
+  height 650px
+  background-position center
+  background-size: cover
+  @media screen and (max-width: 720px)
+    height 450px
+  h1
+    font-weight bold
+    line-height 100px
+    @media screen and (max-width: 720px)
+      line-height 50px
+      font-size 50px
+      letter-spacing -0.02em
+    br
+      display inline
+
+.homepage-header-text
+  padding 30px
+  @media screen and (max-width: 720px)
+    max-width 65%
+    padding 0
+
+.homepage-sub-header
+  @extends .homepage-header
+  background-image url('../assets/homepage-img-1.png')
+  height 700px
+  padding 20px
+
+.homepage-section-3
+  padding 20px
+  height 1000px
+  position relative
+  .products-bg
+    position absolute
+    bottom 0
+    left 0
+    height 50%
+    width 100%
+    background light_grey
+    
+  .products-image
+    position relative
+    background-image url('../assets/homepage-img-3.png')
+    height 100%
+    background-repeat: no-repeat;
+    background-position: 75% 65%;
+    background-size: auto 66%;
+    @media screen and (min-width: 720px)
+      height 100%
+      background-position 100% 75%
+
+    h2
+      position relative
+
+    .bottom-text
+      top: 665px
+
+.homepage-more-links
+  background light_green
+  display flex 
+  > div
+    height 225px
+    flex-basis 0
+    flex-grow 1
+    padding 20px
+  .linebreak
+    display block
+    position relative
+    top -30px
+  @media screen and (max-width: 720px)
+    display block
+    > div
+      height 175px
+      br 
+        display block
+
+
+.careers
+  h2
+    max-width 800px
+    
+#home
+  text-align left
+  .light-green-section
+    padding 20px
+  .white-section
+    padding 20px

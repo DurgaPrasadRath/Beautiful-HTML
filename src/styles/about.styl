@@ -1,0 +1,139 @@
+@import variables
+
+.about-header
+  position relative
+  @media screen and (min-width: 720px)
+    margin 0 auto
+
+.about-header-video
+  display flex
+  padding 25px 20px
+  background-color neon_green
+  > video
+    flex-grow 1
+    flex-basis 0
+    width 50%
+    height 30%
+    @media screen and (max-width: 720px)
+      &:last-of-type
+        display none
+
+.about-header-image
+  margin-top 25px
+  height 400px
+  position relative
+  overflow hidden
+
+  > div
+    position absolute
+    bottom 0
+    left -5% 
+    width 110%
+    height 110%
+    background-position center center
+    background-size 100% auto
+    background-repeat no-repeat
+
+  &-line
+    background-image url("../assets/about-header-line.svg")
+    z-index 1
+
+  &-pixel
+    background-image url("../assets/about-header-pixel.svg")
+    z-index 1
+    animation about-flicker 0.125s infinite step-end
+    
+  &-cbre
+    background-image url("../assets/about-header-cbre.gif")
+  
+  @media screen and (max-width: 720px)
+    height 300px
+    >div 
+      width 150%
+      left -25%
+
+.about-header-text
+  padding 25px 20px 50px 20px
+  background-color dark_green
+  color neon_green
+  p
+    font-size 18px
+    line-height 25px
+    margin-bottom 0
+    width 85%
+    
+  p.large-text
+    margin-bottom 25px
+  
+  @media screen and (min-width: 720px)
+    p
+      font-size 25px
+      line-height 32px    
+  
+.about-section
+  margin 20px auto
+  display flex
+
+  > div
+    flex-grow 1
+    flex-basis 0
+
+  .section-content
+    align-self center
+    max-width 380px
+    
+  @media screen and (max-width: 720px)
+    flex-direction column
+    width 95%
+    &.caption-left .about-caption
+      order 1
+
+.about-image, .about-video
+  width 100%
+  padding-top 100% // weird trick to keep aspect ratio square when scaling
+  display inline-block
+  position relative
+  @media screen and (min-width: 720px)
+    padding-top 50%
+
+.about-video video
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100%
+
+.team-member
+  text-align left
+  color dark_green
+  max-width: 50%
+  overflow hidden
+  float left
+  width 100%
+  @media screen and (min-width: 720px)
+    width 25%
+
+.team-member-profile
+    height 105px
+    text-align left
+    padding 0 0 0 10%
+    @media screen and (min-width: 720px)
+      padding 0 0 0 25%
+
+    .team-member-job
+        font-size 13px
+        line-height 1.54
+
+.team-member-content
+  width 100%
+  margin 0 auto
+  text-align center
+      
+.dark-grey-section .section-head
+  margin-bottom 50px  
+
+@keyframes about-flicker
+  0%, 100%
+    opacity 1
+  50%
+    opacity 0

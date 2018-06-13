@@ -1,0 +1,210 @@
+@import "simple-grid.css"
+@import "fonts/fonts.styl"
+@import variables
+@import mixins
+@import meta-rect
+@import flashy-link
+@import header-footer
+@import home
+@import about
+@import careers
+@import blog
+@import products
+
+
+html, body
+  width 100%
+  height 100%
+  margin 0
+  padding 0
+
+body
+  font-family MADSansFill
+  font-weight normal
+  font-style normal
+  font-stretch normal
+  line-height normal
+  font-size 16px
+  letter-spacing normal
+  slashedZero()  
+  
+  h1
+    font-size 100px
+    letter-spacing -4px
+    color dark_green
+    margin-bottom 0.5em
+
+  a
+    text-decoration none
+    border 0
+    transition none
+    border-bottom 1px dotted neon_green
+    &:hover
+      color neon_green
+      border-bottom 1px dotted neon_green 
+    
+  p
+    line-height 25px
+    letter-spacing 0.025em
+
+  strong
+    font-weight bold
+    
+  h2
+    line-height 1.1
+
+  .mobile-only
+    @media screen and (min-width: 720px)
+      visibility: hidden
+  
+  .extra-large-text
+    font-size 50px
+    line-height 1.1
+    letter-spacing -1.2px
+    text-align left
+    color dork_green
+    height 165px
+    margin 30px 20px
+    @media screen and (min-width: 720px)
+      font-size 100px
+      line-height 1
+      letter-spacing -2.4px
+
+  .large-text
+    font-size 25px
+    @media screen and (min-width: 720px)
+      font-size 50px
+      line-height 1.1
+      letter-spacing -0.2px
+
+  .half-width
+    width 50%
+    display inline-block
+    float left
+
+  .quarter-width
+    @extends body .half-width
+    @media screen and (min-width: 720px)
+      width 25%
+
+  .hidden-lg
+    @media screen and (min-width: 720px)
+      display: none
+
+  .section-large
+    margin 0
+    padding 0
+    @media screen and (min-width: 720px)
+      width 90%
+      margin 50px auto
+
+  .fill-1
+    font-size 24px
+    font-weight bold
+    text-align left
+
+  .fill-2
+    font-size 48px
+    font-weight bold
+    text-align left
+
+  .vertical-line
+    width 1px
+    height 130px
+    border solid 0.5px dark_green
+    margin 5px
+    display: inline-block
+    float: left
+
+  .footer-line
+    @media screen and (min-width: 720px)
+      width 3px
+      height 174px
+      padding 0
+      border solid 0.5px neon_green
+      background-color neon_green
+      margin 5px 10px 0 0
+      float: left
+      display: inline-block
+      
+  .section-wrapper
+    max-width 1200px
+    margin 0 auto
+
+  .section-head
+    font-size 25px
+    color dark_green
+    width 100%
+    height 123.6px
+    margin 0 auto
+    padding 0 auto
+    @media screen and (max-width: 720px)
+      padding 25px 10px 
+    @media screen and (min-width: 720px)
+      font-size 50px
+      width 100%
+      height 200px
+
+  .section-content
+    color dark_green
+    line-height 1.39
+    margin 10px
+    @media screen and (min-width: 720px)
+      padding 10px
+
+    .content-head
+      font-size 25px
+      line-height 1
+
+  .section-number
+    color neon_green 
+    letter-spacing 0.05em
+    tabularNumbers()
+
+  .white-section
+    padding 10px
+
+  .grey-section
+    background-color light_grey
+    padding 10px 10px 10px 10px
+    color dark_green
+    @media screen and (min-width: 720px)
+      padding 80px  
+      
+  #home .careers
+    padding 20px
+
+  .dark-grey-section
+    background-color dark_grey
+    padding 10px 10px 100px 10px
+    color dark_green
+    @media screen and (min-width: 720px)
+      padding 80px
+    .section-number
+      color light_green
+
+  .grid-rectangle
+    padding 10px
+    background-image url('../assets/circuitmap.gif')
+    height 500px
+    @media screen and (max-width: 720px)
+      background-position: center bottom
+
+  .white-box
+    background-color #fff
+    box-shadow 3px 3px 0 0 dark_grey
+    margin 20px 2% 20px 0
+    display inline-block
+    vertical-align top
+    // @media screen and (min-width: 720px)
+      // margin 20px 2%
+
+  .-----------
+    width: 142px;
+    height: 20px;
+
+  .pull-right
+    float:right !important
+
+  .pull-left
+    float: left !important

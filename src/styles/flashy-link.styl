@@ -1,0 +1,45 @@
+.flashy-link
+  display inline-block
+  vertical-align top
+  background alpha(neon_green 0.5)
+  position relative
+  top -2px
+  animation flicker 0.066s infinite step-end
+  transition none
+  cursor pointer
+
+
+  &:hover 
+    background dark_green
+    color neon_green
+    animation none
+    border-bottom 0
+    .meta-rect 
+      color dark_green
+      > div
+        animation flicker-hover 0.05s infinite step-end
+        
+    .flashy-link-content
+      animation flicker-hover 0.05s infinite step-end
+    
+  
+  .arrow-container
+    padding-right 4px !important
+    justify-content flex-end
+  
+.flashy-link-content
+  padding 3px 4px 2px 4px
+
+
+@keyframes flicker
+  0%, 100%
+    background alpha(neon_green 0.5)
+  50%
+    background alpha(neon_green 0.42)
+
+@keyframes flicker-hover
+  0%, 100%
+    opacity 1
+  50%
+    opacity 0.6
+  

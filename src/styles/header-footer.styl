@@ -1,0 +1,81 @@
+@import variables
+
+#header, #footer
+  position relative
+  z-index 3
+  font-size 16px
+  line-height 25px
+  font-weight normal
+  letter-spacing 0.05em
+  .meta-rect
+    height 100%
+    font-size 16px
+    font-weight normal   
+    letter-spacing 0.05em
+    @media only screen and (min-width: 45em)
+      padding 20px
+  .logo 
+    width 125px
+    &:hover svg *
+      fill white
+  
+  a 
+    border-bottom 0
+    &:hover
+      color white
+      border-bottom 0
+  
+.nav-active
+  font-weight bold
+  position relative 
+  .nav-number:after
+    content ' →'
+    margin-right -5px
+
+#header
+  height 150px
+  width 100%
+  font-size 16px
+  color dark_green  
+  .meta-rect
+    padding-bottom 0
+
+
+#footer
+  @media only screen and (min-width: 45em)
+    height 225px
+  @media only screen and (max-width: 45em)
+    .meta-rect
+      padding-top 20px
+      padding-bottom 40px
+    
+
+.dashes
+  margin-bottom 25px
+
+.icon
+  display inline-block
+  width: 25px
+  height: 25px
+  margin: 0 25px 38px 0
+  font-size: 35px
+  line-height 25px
+
+.nav-item
+  display block
+  font-weight normal
+  line-height 25px
+  a:hover
+    font-weight bold
+
+.nav-number
+  margin-right 25px
+  &:after
+    content ' ∕'
+
+.nyc
+  line-height 25px;
+  margin-top 13px
+  font-weight bold;
+  letter-spacing 2.5px;
+

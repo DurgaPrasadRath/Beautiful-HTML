@@ -1,0 +1,11 @@
+slashedZero()
+  font-variant-numeric: slashed-zero;    /* high-level property          */
+  -moz-font-feature-settings: 'zero';    /* low-level (old Firefox)      */
+  -webkit-font-feature-settings: 'zero'; /* low-level (old Webkit)       */
+  font-feature-settings: 'zero' on;      /* low-level (all new browsers) */
+
+tabularNumbers()
+  font-variant-numeric: tabular-nums slashed-zero;  /* high-level property          */
+  -moz-font-feature-settings: 'tnum' 'zero';        /* low-level (old Firefox)      */
+  -webkit-font-feature-settings: 'tnum' 'zero';     /* low-level (old Webkit)       */
+  font-feature-settings: 'tnum' on, 'zero' on;      /* low-level (all new browsers) */
