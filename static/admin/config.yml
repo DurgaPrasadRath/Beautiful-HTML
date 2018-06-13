@@ -33,3 +33,14 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: url, label: Url }
+   - name: article
+    label: article
+    folder: src/pages/article/_posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { name: author, label: Author }
+      - { name: title, label: Title }
+      - { name: tags, label: Tags, widget: list }
+      - { name: date, label: Date, widget: date }
+      - { name: body, label: body, widget: markdown }
