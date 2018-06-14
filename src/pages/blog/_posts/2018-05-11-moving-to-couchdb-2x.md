@@ -1,6 +1,6 @@
 ---
 author: Ben L
-title: Moving to CouchDB 2.x
+title: Moving To CouchDB 2.x
 tags:
   - Engineering
   - Database
